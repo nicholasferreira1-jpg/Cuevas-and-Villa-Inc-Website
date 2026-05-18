@@ -1,7 +1,5 @@
 # About us page
 
-# Home page
-
 from flask import Blueprint, render_template
 
 # Create Blueprint
