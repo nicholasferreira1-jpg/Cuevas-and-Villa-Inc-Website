@@ -1,1 +1,182 @@
-<!-- Parent of all pages, all pages uses this frame -- >
+<!-- Parent of all pages, all pages uses the navbar and footer from this frame -->
+
+<html lang="en" id="html-root">
+
+<head>
+    <meta charset="UTF_8" />
+    <meta name="viewport"
+        content="width=device-width,
+                initial-scale=1.0"/>
+    
+    <!-- Page title - each page can update it -->               
+    <title>
+        {% block title%}
+        Cuevas & Villa Inc
+        {% endblock %}
+    </title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap"
+          rel="stylesheet"/>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static',filename='css/style.css') }}"/>
+
+</head>
+
+<body>
+    <!-- NAVIGATION BAR-->
+    <nav>
+         <!-- Firm Name / Logo -->
+        <div class="nav-logo">
+            <a href="/">Cuevas & Villa Inc</a>
+        </div>
+        <!-- Navigation Links -->
+        <ul class="nav-links">
+            <li>
+                <a href="/">
+                    <span class="lang-en">Home</span>
+                    <span class="lang-es">Inicio</span>
+                </a>
+            </li>
+            <li>
+                <a href="/about">
+                    <span class="lang-en">About Us</span>
+                    <span class="lang-es">Sobre Nosotros</span>
+                </a>
+            </li>
+            <li>
+                <a href="/services">
+                    <span class="lang-en">Services</span>
+                    <span class="lang-es">Servicios</span>
+                </a>
+            </li>
+            <li>
+                <a href="/team">
+                    <span class="lang-en">Team</span>
+                    <span class="lang-es">Equipo</span>
+                </a>
+            </li>
+            <li>
+                <a href="/reviews">
+                    <span class="lang-en">Reviews</span>
+                    <span class="lang-es">Reseñas</span>
+                </a>
+            </li>
+            <li>
+                <a href="/contactus" class="nav-btn">
+                    <span class="lang-en">Contact Us</span>
+                    <span class="lang-es">Contáctenos</span>
+                </a>
+            </li>
+
+        </ul>
+        <!-- Language Toggle Button -->
+        <button
+            id="lang-btn"
+            class="lang-btn"
+            onclick="switchLanguage()">
+            Español
+        </button>
+    </nav>
+
+    <!--Each children page fills this section with its own content-->>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <!-- FOOTER-->
+    <div class="footer-brand">
+            <h3>Cuevas & Villa Inc</h3>
+            <p>
+                <span class="lang-en">Your business handled with precision</span>
+                <span class="lang-es">Su negocio manejado con precisión</span>
+            </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-links">
+            <h4>
+                <span class="lang-en">Quick Links</span>
+                <span class="lang-es">Enlaces Rápidos</span>
+            </h4>
+            <ul>
+                <li>
+                    <a href="/">
+                        <span class="lang-en">Home</span>
+                        <span class="lang-es">Inicio</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/about">
+                        <span class="lang-en">About Us</span>
+                        <span class="lang-es">Sobre Nosotros</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/services">
+                        <span class="lang-en">Services</span>
+                        <span class="lang-es">Servicios</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/team">
+                        <span class="lang-en">Team</span>
+                        <span class="lang-es">Equipo</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/reviews">
+                        <span class="lang-en">Reviews</span>
+                        <span class="lang-es">Reseñas</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/contactus">
+                        <span class="lang-en">Contact Us</span>
+                        <span class="lang-es">Contáctenos</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="footer-contact">
+            <h4>
+                <span class="lang-en">Contact Us</span>
+                <span class="lang-es">Contáctenos</span>
+            </h4>
+            <p>2331 S 18th St</p>
+            <p>Union Gap, WA 98903</p>
+            <p>(509) 249-4001</p>
+            <p>francisco@cuevasvilla.com</p>
+        </div>
+
+        <!-- Business Hours -->
+        <div class="footer-hours">
+            <h4>
+                <span class="lang-en">Business Hours</span>
+                <span class="lang-es">Horario de Atención</span>
+            </h4>
+            <p>
+                <span class="lang-en">Mon - Fri: 9am - 7pm</span>
+                <span class="lang-es">Lun - Vie: 9am - 7pm</span>
+            </p>
+            <p>
+                <span class="lang-en">Sat - Sun: 9am - 4pm</span>
+                <span class="lang-es">Sáb - Dom: 9am - 4pm</span>
+            </p>
+            <p>
+                <span class="lang-en">In Person Meetings Only</span>
+                <span class="lang-es">Solo Reuniones Presenciales</span>
+            </p>
+        </div>
+
+    </footer>
+
+    <!-- Main JavaScript file -->
+    <script src="{{ url_for('static',filename='js/main.js') }}">
+    </script>
+
+</body>
+</html>
