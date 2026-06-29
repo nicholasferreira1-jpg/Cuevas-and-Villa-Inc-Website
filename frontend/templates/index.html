@@ -1,1 +1,290 @@
-<!-- Home page -- >
+<!--  Home page - Contains:Hero section, Why choose us section, Services preview, Call to action                -->
+
+
+<!-- Connects this page to base.html -->
+{% extends "base.html" %}
+
+<!-- Page title -->
+{% block title %}
+    Home | Cuevas & Villa Inc
+{% endblock %}
+
+<!-- Page content -->
+{% block content %}
+    <section class="hero">
+        <h1>
+            <span class="lang-en">
+                Welcome to Cuevas & Villa Inc
+            </span>
+            <span class="lang-es">
+                Bienvenidos a Cuevas & Villa Inc
+            </span>
+        </h1>
+        
+        <p class="hero-tagline">
+            <span class="lang-en">
+                Your business handled with precision
+            </span>
+            <span class="lang-es">
+                Su negocio manejado con precisión
+            </span>
+            
+        </p>
+
+        <p class="hero-phone">
+            <span class="lang-es">Call us today:</span>
+            <span class="lang-es">Llámenos hoy:</span>
+            <a href="tel:5092494001ddd">(509) 249 - 4001</a>
+        </p>
+
+        <div class="notice -banner">
+            <p>
+                <span class="lang-es">
+                    We currently only offer
+                    <strong>In Person</strong> meetings
+                    at our office in Union Gap, WA.
+                    Online consultations
+                    <strong>coming soon!</strong>
+                </span>
+                <span class="lang-es">
+                    Actualmente solo ofrecemos
+                    reuniones <strong>Presenciales</strong>
+                    en nuestra oficina en Union Gap, WA.
+                    Consultas en línea
+                    <strong>¡próximamente!</strong>   
+                </span>
+            </p>
+        </div>
+        
+        <div class="hero-buttons">
+            <!-- Get in touch button -->
+            <a href="/contactus" class="btn-primary">
+                <span class="lang-en">Get In Touch</span>
+                <span class="lang-es">Contáctenos</span>
+            </a>
+
+            <!-- Call us directly button -->
+            <a href="tel:5092494001" class="btn-secondary">
+                <span class="lang-en">Call Us Now</span>
+                <span class="lang-es">Llámenos Ahora</span>
+            </a>
+
+        </div>
+    </section>
+
+        <!-- Why us Section-->
+    <section class="why-us">
+        <h2>
+            <span class="lang-en">Why Choose Us</span>
+            <span class="lang-es">Por Qué Elegirnos</span>            
+        </h2>
+
+        <div class="why-us-grid">
+            <div class="why-card">
+                <h3>
+                    <span class="lang-en">Experience</span>
+                    <span class="lang-es">Experiencia</span>
+                </h3>
+                <p>
+                    <span class="lang-en">
+                        Years of experience helping
+                        individuals and businesses
+                        in the Yakima Valley
+
+                    </span>
+                    <span class="lang-es">
+                        Años de experiencia ayudando
+                        a personas y negocios en
+                        el Valle de Yakima
+                    </span>
+                </p>
+            </div>
+            <div class="why-card">
+                <h3>
+                    <span class="lang-en">Trusted</span>
+                    <span class="lang-es">COnfiable</span>
+                </h3>
+                <p>
+                    <span class="lang-en">
+                        Hundreds of satisfied clients
+                        trust us with their tax needs
+                        every year
+                    </span>
+                    <span class="lang-es">
+                        Cientos de clientes satisfechos
+                        confían en nosotros con sus
+                        necesidades fiscales cada año
+                    </span>
+                </p>
+            </div>  
+            <div class="why-card">
+                <h3>
+                    <span class="lang-en">Bilingual</span>
+                    <span class="lang-es">Bilingüe</span>
+                </h3>
+                <p>
+                    <span class="lang-en">
+                        We serve both English and
+                        Spanish speaking clients
+                        with equal care
+                    </span>
+                    <span class="lang-es">
+                        Servimos a clientes de habla
+                        inglesa y española con
+                        igual dedicación
+                    </span>
+                </p>
+            </div>  
+        </div>
+    </section>
+
+
+        <!-- Services Section -->
+
+
+    <section class="services-preview">
+
+        <h2>
+            <span class="lang-en">Our Services</spna>
+            <span class="lang-es">Nuestros Servicios</span>
+        </h2>
+
+        <div class="services-grid">
+
+                    <!-- Service 1-->
+
+            <div class="service-card">
+                <h3>
+                     <span class="lang-en">
+                        Personal Tax Returns
+                    </span>
+                    <span class="lang-es">
+                        Impuestos Personales
+                    </span>
+                </h3>
+                <p>
+                     <span class="lang-en">
+                        Professional personal tax
+                        preparation and filing
+                    </span>
+                    <span class="lang-es">
+                        Preparación y presentación profesional de impuestos personales
+                    </span>
+                </p>
+            </div>
+            
+                    <!-- Service 2 -->
+
+            <div class="sevice-card">
+                <h3> 
+                      <span class="lang-en">
+                        Business Tax Returns
+                    </span>
+                    <span class="lang-es">
+                        Impuestos de Negocios
+                    </span>
+                </h3>       
+                <p>
+                      <span class="lang-en">
+                        Complete business tax preparation and plannig
+                    </span>
+                    <span class="lang-es">
+                        Preparación y planificación completa de impuestos de negocios
+                    </span>
+                </p> 
+            </div>
+
+         <!-- Service 3 -->
+
+            <div class="sevice-card">
+                <h3> 
+                      <span class="lang-en">
+                        Payroll
+                    </span>
+                    <span class="lang-es">
+                        Nómina
+                    </span>
+                </h3>       
+                <p>
+                      <span class="lang-en">
+                        Complete payroll management for your business
+                    </span>
+                    <span class="lang-es">
+                        Preparación y planificación completa de impuestos de negociosGestión completa de nómina
+                        para su negocio
+                    </span>
+                </p> 
+            </div>
+         <!-- Service 4 -->
+
+            <div class="sevice-card">
+                <h3> 
+                      <span class="lang-en">
+                        Employee Management
+                    </span>
+                    <span class="lang-es">
+                        Manejo de Empleados
+                    </span>
+                </h3>       
+                <p>
+                      <span class="lang-en">
+                        Complete employee management solutions for your business
+                    </span>
+                    <span class="lang-es">
+                        Soluciones completas de manejo de empleados para su negocio
+                    </span>
+                </p> 
+            </div>
+        
+        </div>
+
+        <a href="/services" class="btn-primary">
+            <span class="lang-en">
+                View All Services
+            </span>
+            <span class="lang-es">
+                Ver Todos los Servicios 
+            </span>
+        </a>
+
+        
+    </section>
+    <section class="call to action">
+        <h2>
+            <span class="lang-en"> Ready To Get Started?</span>
+            <span class="lang-es">¿Listo para Comenzar?</span>
+        </h2>
+        <p>
+            <span class="lang-en">
+                Reach out to us today by phone
+            </span>
+            <span class="lang-es">
+                Comuníquese con nosotros hoy
+                por teléfono 
+            </span> 
+        </p>
+        <p class="in-person-notice">
+            <span class="lang-en">
+                 In Person Meetings Only
+                — 2331 S 18th St, Union Gap, WA 98903
+            </span>
+            <span class="lang-es">
+                 Solo Reuniones Presenciales
+                — 2331 S 18th St, Union Gap, WA 98903
+            </span>
+        </p>
+         <div class="cta-buttons">
+
+            <a href="/contactus" class="btn-primary">
+                <span class="lang-en">Contact Us</span>
+                <span class="lang-es">Contáctenos</span>
+            </a>
+
+            <a href="tel:5092494001" class="btn-secondary">
+                <span class="lang-en">(509) 249-4001</span>
+                <span class="lang-es">(509) 249-4001</span>
+            </a>
+
+        </div>
+
+    </section>
